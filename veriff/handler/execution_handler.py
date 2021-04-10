@@ -1,8 +1,8 @@
 import time
 import multiprocessing as mp
 from multiprocessing import Pool
-from veriff.dto.context import Context
-from veriff.handler.abstract_handler import AbstractHandler
+from veriff.data.context import Context
+from veriff.handler import AbstractHandler
 from veriff.util.logger_util import get_logger
 
 logger = get_logger(__name__)

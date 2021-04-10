@@ -4,6 +4,6 @@ from veriff import pipeline
 logger = get_logger(__name__)
 
 if __name__ == "__main__":
-    logger.info("start")
-    pipeline.execute()
-    logger.info("completed")
+    logger.info("Application starting")
+    status = pipeline.execute()
+    logger.info("Application stopped status:%r", status)
