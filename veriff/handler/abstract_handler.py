@@ -1,6 +1,7 @@
-from veriff.process.context import Context
+from veriff.dto.context import Context
 
 
+# Abstract Handler
 class AbstractHandler:
     next = None  # Type AbstractHandler
 

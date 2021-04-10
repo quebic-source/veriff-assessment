@@ -1,5 +1,5 @@
-from veriff.process.context import Context
-from veriff.process.handler.abstract_handler import AbstractHandler
+from veriff.dto.context import Context
+from veriff.handler.abstract_handler import AbstractHandler
 
 
 class ResultGenerateHandler(AbstractHandler):
