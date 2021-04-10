@@ -31,8 +31,8 @@ def download_data(file_url):
 
 
 def unzip(zip_file_path, output_dir=None):
-    logger.info("data-set unzip start")
     start_time = time.time()
+    logger.info("data-set unzip start")
 
     if output_dir is not None:
         shutil.rmtree(output_dir, ignore_errors=True)

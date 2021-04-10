@@ -1,4 +1,5 @@
 import os
+import time
 
 from veriff.consts import DATA_SET_URL_ENV
 from veriff.consts import DATA_SET_DIR_ENV
@@ -16,6 +17,7 @@ class DataLoaderHandler(AbstractHandler):
         DataLoaderHandler is used to prepare data set
     """
     def handle(self, context: Context):
+        start_time = time.time()
         logger.info("data-set loading start")
 
         data_set_url = os.getenv(DATA_SET_URL_ENV)
@@ -28,5 +30,5 @@ class DataLoaderHandler(AbstractHandler):
         # get list by the file pattern data_set_dir/<unzip_dir>/<name_dir>/<image>.<ext>
         context.data_set = list_files(data_set_dir + "/*/*/*.*")
 
-        logger.info("data-set loading completed")
+        logger.info("data-set loading completed. took %r seconds", (time.time() - start_time))
         self.next.handle(context)
