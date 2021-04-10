@@ -10,7 +10,7 @@ def get_logger(module_name):
 
     # '%(asctime)s - {%(pathname)s:%(lineno)d} - %(name)s - %(levelname)s - %(message)s',
     formatter = logging.Formatter(
-        '%(asctime)s - {%(pathname)s:%(lineno)d} - %(levelname)s - %(message)s',
+        '%(asctime)s - %(name)s:%(lineno)d - %(levelname)s - %(message)s',
         datefmt='%Y/%m/%d %I:%M:%S %p'
     )
 
