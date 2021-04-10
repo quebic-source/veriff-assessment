@@ -3,16 +3,19 @@ import multiprocessing as mp
 from multiprocessing import Pool
 from veriff.dto.context import Context
 from veriff.handler.abstract_handler import AbstractHandler
+from veriff.util.logger_util import get_logger
+
+logger = get_logger(__name__)
 
 
 def f(x):
-    time.sleep(20)
+    time.sleep(1)
     return x*x
 
 
 class FaceVectorCalculatorHandler(AbstractHandler):
     def handle(self, context: Context):
-        print("FaceVectorCalculatorHandler start")
+        logger.info("FaceVectorCalculatorHandler start")
 
         face_images_data_list = context.data_set
 
@@ -21,5 +24,5 @@ class FaceVectorCalculatorHandler(AbstractHandler):
         with Pool(pool_size) as p:
             context.result = p.map(f, face_images_data_list)
 
-        print("FaceVectorCalculatorHandler done")
+        logger.info("FaceVectorCalculatorHandler done")
         self.next.handle(context)
