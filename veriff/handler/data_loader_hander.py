@@ -30,5 +30,6 @@ class DataLoaderHandler(AbstractHandler):
         # get list by the file pattern data_set_dir/<unzip_dir>/<name_dir>/<image>.<ext>
         context.data_set = list_files(data_set_dir + "/*/*/*.*")
 
-        logger.info("data-set loading completed. took %r seconds", (time.time() - start_time))
+        logger.info("data-set loading completed. found %r files. took %r seconds"
+                    , len(context.data_set), (time.time() - start_time))
         self.next.handle(context)

@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 
 def face_encodings(image_path):
     start_time = time.time()
-    logger.info("face_encodings start")
+    logger.info("face_encodings start %r", image_path)
     image_data = face_recognition.load_image_file(image_path)
     face_vector = face_recognition.face_encodings(image_data)[0]
     logger.info("face_encodings completed. took %r seconds", (time.time() - start_time))
