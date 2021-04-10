@@ -22,4 +22,4 @@ class AbstractHandler:
         :param context:
         :return:
         """
-        raise Exception("not implemented error")
+        raise NotImplementedError()

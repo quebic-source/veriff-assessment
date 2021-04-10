@@ -1,4 +1,4 @@
-from veriff.util.logger_util import get_logger
+from veriff.helper.logger_util import get_logger
 from veriff import pipeline
 
 logger = get_logger(__name__)

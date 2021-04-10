@@ -3,7 +3,7 @@ import multiprocessing as mp
 from multiprocessing import Pool
 from veriff.data.context import Context
 from veriff.handler import AbstractHandler
-from veriff.util.logger_util import get_logger
+from veriff.helper.logger_util import get_logger
 
 logger = get_logger(__name__)
 

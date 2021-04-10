@@ -1,0 +1,2 @@
+class ConfigurationMissingError(RuntimeError):
+    pass

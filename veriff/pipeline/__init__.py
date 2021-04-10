@@ -2,7 +2,7 @@ from veriff.data.context import Context
 from veriff.handler.data_loader_hander import DataLoaderHandler
 from veriff.handler.execution_handler import FaceVectorCalculatorHandler
 from veriff.handler.result_generate_handler import ResultGenerateHandler
-from veriff.util.logger_util import get_logger
+from veriff.helper.logger_util import get_logger
 
 logger = get_logger(__name__)
 
