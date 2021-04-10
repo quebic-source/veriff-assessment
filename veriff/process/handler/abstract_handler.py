@@ -1,4 +1,4 @@
-from app.process.context import Context
+from veriff.process.context import Context
 
 
 class AbstractHandler:
