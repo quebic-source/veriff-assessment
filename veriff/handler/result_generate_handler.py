@@ -14,4 +14,3 @@ class ResultGenerateHandler(AbstractHandler):
         logger.info("!!!! result !!!")
         logger.info(context.result)
         logger.info("ResultGenerateHandler done")
-        raise ValueError()

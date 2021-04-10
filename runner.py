@@ -6,4 +6,4 @@ logger = get_logger(__name__)
 if __name__ == "__main__":
     logger.info("Application starting")
     status = pipeline.execute()
-    logger.info("Application stopped status:%r", status)
+    logger.info("Application stopped status:%s", "OK" if status else "FAILED")
