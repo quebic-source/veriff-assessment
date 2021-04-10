@@ -6,6 +6,9 @@ logger = get_logger(__name__)
 
 
 class ResultGenerateHandler(AbstractHandler):
+    """
+        ResultGenerateHandler is used to prepare result
+    """
     def handle(self, context: Context):
         logger.info("ResultGenerateHandler start")
         logger.info("!!!! result !!!")

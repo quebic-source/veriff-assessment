@@ -14,6 +14,9 @@ def f(x):
 
 
 class FaceVectorCalculatorHandler(AbstractHandler):
+    """
+        FaceVectorCalculatorHandler is used to calculate average face vector
+    """
     def handle(self, context: Context):
         logger.info("FaceVectorCalculatorHandler start")
 
