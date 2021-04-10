@@ -2,13 +2,17 @@ import logging
 
 
 def get_logger(module_name):
+    """
+    common logger
+    :param module_name:
+    :return:
+    """
     logger = logging.getLogger(module_name)
     logger.setLevel(logging.DEBUG)
 
     ch = logging.StreamHandler()
     ch.setLevel(logging.DEBUG)
 
-    # '%(asctime)s - {%(pathname)s:%(lineno)d} - %(name)s - %(levelname)s - %(message)s',
     formatter = logging.Formatter(
         '%(asctime)s - %(name)s:%(lineno)d - %(levelname)s - %(message)s',
         datefmt='%Y/%m/%d %I:%M:%S %p'
