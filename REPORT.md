@@ -18,6 +18,7 @@
 * We can setup Ray-Cluster and Workers. Then distributes the workload among each workers.
 * Ray-Cluster automatically scale the Workers pool based on the load.
 * All the Ray-Cluster setup configuration yaml contains inside the [ray](ray/cluster-setup.yaml) directory.
+###### How Its works
 ![distributed-processing](images/distributed-processing.png)
 
 ###### Ray-Cluster Setup on Kubernetes
