@@ -17,7 +17,7 @@
 * For that we can use Python [Ray](https://ray.io) distributed execution framework.
 * We can setup Ray-Cluster and Workers. Then distributes the workload among each workers.
 * Ray-Cluster automatically scale the Workers pool based on the load.
-* All the Ray-Cluster setup configuration yaml contains inside the [ray](ray/cluster-setup) directory.
+* All the Ray-Cluster setup configuration yaml contains inside the [ray](ray/cluster-setup.yaml) directory.
 ![distributed-processing](images/distributed-processing.png)
 
 ###### Ray-Cluster Setup on Kubernetes
@@ -90,6 +90,6 @@ post_build:
 ```
 
 ###### Performance
-* Tested on 4 vCPUs, 32 GB Ram, GCP Kubernetes Engine.
+* Tested on 8 vCPUs, 32 GB Ram, GCP Kubernetes Engine.
 * Took 16.45 minutes.
  ![result](images/result.png)
