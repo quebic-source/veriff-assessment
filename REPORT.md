@@ -5,7 +5,7 @@
 * [Results](#results)
 
 ## <a name="implementation"></a>Implementation
-#### The implementation of the solution mainly based on "Chain-of-Responsibility" design pattern.
+#### The implementation of the solution mainly based on Chain-of-Responsibility design pattern.
 ![implementation](images/implementation.png)
 
 
