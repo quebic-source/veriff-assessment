@@ -1,0 +1,19 @@
+name: veriff-assignment
+
+image:
+  repository: quebicdocker/veriff-assessment
+  tag: "latest"
+
+env:
+  DATA_SET_URL: "http://vis-www.cs.umass.edu/lfw/lfw.tgz"
+  DATA_SET_DIR: "/mnt/fileserver/data_set"
+  RUNNING_MODE: "host"
+  HEAD_SERVICE_IP_ENV: "VERIFF_CLUSTER_RAY_HEAD_SERVICE_HOST"
+  HEAD_SERVICE_CLIENT_PORT_ENV: "VERIFF_CLUSTER_RAY_HEAD_SERVICE_PORT_CLIENT"
+
+
+volume:
+  name: fileserverv
+  claimName: fileserver-claim # PersistentVolumeClaim
+  readOnly: false
+  mountPath: /mnt/fileserver

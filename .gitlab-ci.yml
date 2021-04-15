@@ -1,0 +1,22 @@
+image: docker:19.03.8
+
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+
+services:
+  - docker:19.03.8-dind
+
+before_script:
+  - echo "before_script"
+
+deploy:
+  stage: deploy
+  when: manual
+  script:
+    - echo "deploy start"
+    - docker info
+    - echo "@T2267356y19911012" | docker login --username quebicdocker --password-stdin
+    - docker build -t veriff-assessment .
+    - docker tag veriff-assessment:latest quebicdocker/veriff-assessment:latest
+    - docker push quebicdocker/veriff-assessment:latest
+    - echo "deploy done"

@@ -1,5 +1,4 @@
 import time
-
 from veriff.helper.logger_util import get_logger
 from veriff import pipeline
 

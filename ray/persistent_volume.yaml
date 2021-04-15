@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: fileserver
+  namespace: veriff
+spec:
+  capacity:
+    storage: 10G
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /qbstorage
+    server: 10.137.210.106

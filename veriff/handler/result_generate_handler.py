@@ -10,7 +10,6 @@ class ResultGenerateHandler(AbstractHandler):
         ResultGenerateHandler is used to prepare result
     """
     def handle(self, context: Context):
-        logger.info("ResultGenerateHandler start")
-        logger.info("!!!! result !!!")
-        logger.info(context.result)
-        logger.info("ResultGenerateHandler done")
+        logger.info("!!!! RESULT !!!")
+        print(context.result)
+        # TODO result need to save
